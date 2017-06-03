@@ -1,6 +1,6 @@
 
 <div *ngFor="let list of data; let i = index">
-      <div class="">
+      <div class="accordian">
         <p (click)="openAccordin(i)">{{list.heading}}</p>
         <p class="accorDesc" [ngClass]="list.openstatus">{{list.desc}}</p>
       </div>
