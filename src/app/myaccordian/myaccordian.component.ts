@@ -15,20 +15,20 @@ export class MyaccordianComponent implements OnInit {
   ngOnInit() {
     this.accordianArr = [
       {
-      heading : "heading1",
-      desc : "my desc"
+      heading : "What is Lorem Ipsum",
+      desc : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled."
     },
       {
-        heading : "heading1",
-        desc : "my desc"
+        heading : "Why do we use it",
+        desc : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled."
       },
       {
-        heading : "heading1",
-        desc : "my desc"
+        heading : "Where does it come from",
+        desc : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled."
       },
       {
-        heading : "heading1",
-        desc : "my desc"
+        heading : "Where can I get some",
+        desc : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled."
       }
     ]
   }

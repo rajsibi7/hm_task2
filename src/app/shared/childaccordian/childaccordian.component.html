@@ -1,8 +1,18 @@
 
 <div *ngFor="let list of data; let i = index">
       <div class="accordian">
-        <p (click)="openAccordin(i)">{{list.heading}}</p>
-        <p class="accorDesc" [ngClass]="list.openstatus">{{list.desc}}</p>
+        <div class="header" (click)="openAccordin(i)">
+          <div>
+            <i class="fa fa-plus" aria-hidden="true" *ngIf="list.openstatus=='closes'"></i>
+            <i class="fa fa-minus" aria-hidden="true" *ngIf="list.openstatus=='opens'"></i>
+          </div>
+          <div>
+            <h4>{{list.heading}}</h4>
+          </div>
+        </div>
+        <div class="body accorDesc"  [ngClass]="list.openstatus">
+          <p>{{list.desc}}</p>
+        </div>
       </div>
 </div>
 

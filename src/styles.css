@@ -51,6 +51,58 @@ h3 {
 .accorDesc.closes {
   display: none;
 }
+.accordian {
+  background: #828080;
+  margin-bottom: 3px;
+  width: 500px;
+  border-radius: 3px;
+  display: inline-flex;
+  flex-direction: column;
+}
+.accordian .header {
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.accordian .header h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+.accordian .header h4 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+.accordian .body {
+  background: #b1b1b1;
+  padding: 12px;
+  transition: .3s ease-out;
+}
+.body p {
+  color: #fff !important;
+  font-weight: 300;
+  font-size: 14px;
+}
+.ac {
+  margin: 20px;
+}
+.fa {
+  color: #fff;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+input {
+   width: 500px;
+   padding: 8px;
+  height: 34px;
+  font-size: 15px;
+}
 .youtubePlayer {
   display: flex;
   justify-content: flex-start;

@@ -30,7 +30,7 @@ export class ChildaccordianComponent implements OnInit {
   }
 
   setDeafultStatus(s) {
-    if (s == 'openAlways' || s == 'closeAlways') {
+    if (s == 'openAlways' || s == 'closeAlways' || s == 'oneAtaTIme') {
     this.data.filter(list =>{
       if(s == 'openAlways'){
         list.openstatus = 'opens';
