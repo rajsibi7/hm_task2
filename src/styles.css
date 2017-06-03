@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+button {
+  padding: 8px;
+  background: #F44336;
+  width: 100px;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 57px;
+  background: #03A9F4;
+  top: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  padding-left: 15px;
+  padding-right: 15px;
+}
