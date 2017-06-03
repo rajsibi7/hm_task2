@@ -6,15 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { MyaccordianComponent } from './myaccordian/myaccordian.component';
-import { ChildaccordianComponent } from './shared/childaccordian/childaccordian.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
-    MyaccordianComponent,
-    ChildaccordianComponent
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

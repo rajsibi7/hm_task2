@@ -1,5 +1,13 @@
 <nav>
-  <button (click)="toggle()">OnClick</button>
+  <div>
+    <h3>ANGULAR TASK</h3>
+  </div>
+  <div>
+    <button (click)="toggle()">OnClick</button>
+  </div>
 </nav>
-<div class="sidebar"  [@slideInOut]="menuState"></div>
+<div class="sidebar"  [@slideInOut]="menuState">
+
+</div>
+<div class="overlay" (click)="hideoverlay()" *ngIf="over"></div>
 
