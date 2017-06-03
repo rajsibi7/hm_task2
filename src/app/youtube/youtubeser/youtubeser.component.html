@@ -1,4 +1,8 @@
-<input type="text" [(ngModel)]="searchKey" (keydown)="doKeydown()" (keyup)="doKeyup(searchKey)" >
+
+<div class="serach">
+  <h2><span>YOUTUBE</span> Search</h2>
+  <input type="text" [(ngModel)]="searchKey" (keydown)="doKeydown()" (keyup)="doKeyup(searchKey)" >
+</div>
 <p (click)="this.ListOrVideo = 'List'" *ngIf="ListOrVideo == 'Video'"><----Back</p>
 <div class="youtubePlayer" *ngIf="ListOrVideo == 'List'">
 
