@@ -22,12 +22,16 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class SidebarComponent implements OnInit {
   menuState:string = 'out';
+  over:boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
   toggle(){
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
+  }
+  hideoverlay(){
+    this.menuState = 'out';
   }
 
 }
