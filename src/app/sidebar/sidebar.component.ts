@@ -22,7 +22,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class SidebarComponent implements OnInit {
   menuState:string = 'out';
-  over:boolean = false;
   constructor() { }
 
   ngOnInit() {

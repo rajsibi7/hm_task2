@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MyaccordianComponent } from './myaccordian/myaccordian.component';
 import { ChildaccordianComponent } from './shared/childaccordian/childaccordian.component';
+import { YoutubeserComponent } from './youtube/youtubeser/youtubeser.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     MyaccordianComponent,
-    ChildaccordianComponent
+    ChildaccordianComponent,
+    YoutubeserComponent
   ],
   imports: [
     BrowserModule,

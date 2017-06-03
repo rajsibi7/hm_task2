@@ -9,5 +9,5 @@
 <div class="sidebar"  [@slideInOut]="menuState">
 
 </div>
-<div class="overlay" (click)="hideoverlay()" *ngIf="over"></div>
+<div class="overlay" (click)="hideoverlay()" *ngIf="this.menuState == 'in'"></div>
 
