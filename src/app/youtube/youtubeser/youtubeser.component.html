@@ -1,0 +1,31 @@
+<input type="text" [(ngModel)]="searchKey" (keydown)="doKeydown()" (keyup)="doKeyup(searchKey)" >
+<p (click)="this.ListOrVideo = 'List'" *ngIf="ListOrVideo == 'Video'"><----Back</p>
+<div class="youtubePlayer" *ngIf="ListOrVideo == 'List'">
+
+  <div *ngFor="let vlist of videoList" >
+    <img width="196" height="110" data-ytimg="1" src="{{vlist.snippet.thumbnails.default.url}}" (click)="play(vlist.id.videoId)">
+    <p>title : {{vlist.snippet.title}}</p>
+  </div>
+</div>
+
+
+<div class="youtubePlayer" *ngIf="ListOrVideo == 'Video'">
+    ---------play video --------
+
+
+  <div *ngFor="let vlist of videoObj">
+    <iframe width="420" height="315"
+            src="https://www.youtube.com/embed/{{vlist.id}}">
+    </iframe>
+
+    {{vlist.snippet.title}}
+  </div>
+  ------------Relaated Video
+  <div *ngFor="let vlist of relatedVideo" >
+    <img width="196" height="110" data-ytimg="1" src="{{vlist.snippet.thumbnails.default.url}}" (click)="play(vlist.id.videoId)">
+    <p>title : {{vlist.snippet.title}}</p>
+  </div>
+
+
+</div>
+
