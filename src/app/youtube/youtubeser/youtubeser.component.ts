@@ -1,8 +1,8 @@
-import { Component, OnInit ,Injectable  } from '@angular/core';
+import { Component, OnInit ,Injectable , Pipe, PipeTransform } from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
-//import {SafeResourceUrl, DomSanitizationService} from '@angularplatform-browser/index';
+import {SafeResourceUrl, DomSanitizer} from '@angular/platform-browser';
 
 import 'rxjs/add/operator/catch';@Injectable()
 
@@ -13,7 +13,7 @@ import 'rxjs/add/operator/catch';@Injectable()
 })
 export class YoutubeserComponent implements OnInit {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http , private sanitizer: DomSanitizer) { }
 
   videoList : any;
   searchKey : string = 'cricket';
@@ -31,18 +31,22 @@ export class YoutubeserComponent implements OnInit {
 
   }
 
+  geturl(id){
+    return this.sanitizer.bypassSecurityTrustResourceUrl('https://youtube.com/embed/'+ id);
+  }
+
   play(id){
 
     this.videoDetail(id).subscribe(data=>{
-      console.log(data);
         this.videoObj = data.items;
-        console.log(this.videoObj);
-     //   this.url = sanitizer.bypassSecurityTrustResourceUrl('https://youtube.com/embed/XHCVWWsQmUs');
+        this.url = this.sanitizer.bypassSecurityTrustResourceUrl('https://youtube.com/embed/'+ this.videoObj[0]['id']);
       },
       err =>{
         console.log(err);
       }
-    )
+    );
+
+
 
     this.getRelatedVideo(id).subscribe(data=>{
         console.log(data);
@@ -86,3 +90,4 @@ export class YoutubeserComponent implements OnInit {
   getRelatedVideo(id){        return this.http.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${id}`+            '&maxResults=10' +            '&type=video' +            '&key=AIzaSyDZO84ectyO42qUBE98WxWYO7rVLkNIezE')            .map(response => response.json())    }
 
 }
+
