@@ -1,0 +1,17 @@
+
+<div *ngFor="let list of data; let i = index">
+      <div class="">
+        <p (click)="openAccordin(i)">{{list.heading}}</p>
+        <p class="accorDesc" [ngClass]="list.openstatus">{{list.desc}}</p>
+      </div>
+</div>
+
+
+<style>
+  .opens.accorDesc {
+    color: green;
+  }
+  .closes.accorDesc {
+
+  }
+</style>
